@@ -444,7 +444,7 @@ elif selected_section == "Database":
     if browse_button:
         options=Options()
         options.add_experimental_option("detach",True)
-        driver=webdriver.Chrome(options=options)
+        driver=webdriver.Chrome(ChromeDriverManager().install())
         url="https://indiankanoon.org/"
         driver.get(url)
         time.sleep(0.2)
@@ -459,7 +459,7 @@ elif selected_section == "Database":
     if read_button:
         options=Options()
         options.add_experimental_option("detach",True)
-        driver=webdriver.Chrome(options=options)
+        driver=webdriver.Chrome(ChromeDriverManager().install())
         url="https://indiankanoon.org/"
         driver.get(url)
         driver.minimize_window()
