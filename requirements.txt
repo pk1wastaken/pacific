@@ -1,0 +1,11 @@
+streamlit
+requests
+streamlit_lottie
+pytesseract
+transformers
+PyPDF2
+gtts
+playsound
+uuid
+selenium
+txtai
