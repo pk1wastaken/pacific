@@ -9,3 +9,4 @@ playsound
 uuid
 selenium
 txtai
+webdriver_manager
