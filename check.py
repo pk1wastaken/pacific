@@ -103,7 +103,7 @@ def Summarization(input_text):
     summary_text=summarizer(input_text)
     return summary_text
 
-def text_to_speech(inptext, language='en'):
+def text_to_speech(inptext, language):
     try:
         # Create a gTTS object and specify the language
         #tts = gTTS(text=text, lang=language, slow=False ,fast=True)
