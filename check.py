@@ -130,7 +130,7 @@ img10=Image.open("img10.png")
 img11=Image.open("img11.png")
 img12=Image.open("img12.png")
 lottie_law=load_lottiefile("law.json")
-
+ChromeDriverManager().install()
 # CSS for styling
 st.markdown(
     """
