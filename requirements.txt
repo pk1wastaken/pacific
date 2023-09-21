@@ -12,5 +12,4 @@ txtai
 webdriver-manager
 webdriver_manager
 chromedriver-py
-chromium-browser
 libnss3
