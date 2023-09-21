@@ -20,7 +20,7 @@ from selenium.webdriver.chrome.service import Service
 import time
 from txtai.pipeline import Summary, Textractor
 from PyPDF2 import PdfReader
-
+CHROME_DRIVER_PATH = os.path.abspath('assets/chromedriver')
 st.set_page_config(layout="wide")
 
 @st.cache_resource
@@ -436,15 +436,15 @@ elif selected_section == "Simplify":
 elif selected_section == "Database":
     st.title("Unlocking Case files: Discover Legal Insights with Smart Search")
     local_css()
-    ChromeDriverManager().install()
     st.subheader("Browse Through Case Files")
     st.write("Explore a diverse collection of Indian case files, ranging from criminal to civil cases. Dive into legal insights, precedent cases, and historical rulings that have shaped India's legal landscape.\n")
     case = st.text_input("", "Search...")
     browse_button= st.button("Browse")
     if browse_button:
         options=Options()
+        ChromeDriverManager().install()
         options.add_experimental_option("detach",True)
-        driver=webdriver.Chrome(ChromeDriverManager().install())
+        driver=webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
         url="https://indiankanoon.org/"
         driver.get(url)
         time.sleep(0.2)
@@ -459,7 +459,8 @@ elif selected_section == "Database":
     if read_button:
         options=Options()
         options.add_experimental_option("detach",True)
-        driver=webdriver.Chrome(ChromeDriverManager().install())
+        ChromeDriverManager().install()
+        driver=webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
         url="https://indiankanoon.org/"
         driver.get(url)
         driver.minimize_window()
