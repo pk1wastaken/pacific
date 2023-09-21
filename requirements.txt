@@ -9,5 +9,6 @@ playsound
 uuid
 selenium
 txtai
+webdriver-manager
 webdriver_manager
 chromedriver-py
